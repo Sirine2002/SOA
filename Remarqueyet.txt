@@ -1,0 +1,10 @@
+**H2**
+-pour Accéder à la console H2 : http://localhost:8081/h2-console
+-pour démarrer le serveur : mvn spring-boot:run -Dspring-boot.run.profiles=h2
+-les données qu'on va saisir dans l'interface sont présentées dans application-h2.properties
+
+
+**JSON**
+-pour Accéder au Swagger UI (si OpenAPI est activé) : http://localhost:8081
+-pour démarrer le serveur : mvn spring-boot:run -Dspring-boot.run.profiles=json
+
