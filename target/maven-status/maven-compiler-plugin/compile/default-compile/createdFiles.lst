@@ -1,0 +1,16 @@
+com\speed_liv\menu\api\MenusApi.class
+org\openapitools\OpenApiGeneratorApplication.class
+com\speed_liv\menu\api\ApiUtil.class
+org\openapitools\RFC3339DateFormat.class
+com\speed_liv\menu\model\entity\Plat.class
+com\speed_liv\menu\api\RestaurantController.class
+com\speed_liv\menu\model\entity\Restaurant.class
+com\speed_liv\menu\model\repository\RestaurantRepository.class
+com\speed_liv\menu\model\dto\PlatDto.class
+com\speed_liv\menu\infrastructure\json\JsonRestaurantRepository.class
+com\speed_liv\menu\service\RestaurantService.class
+org\openapitools\configuration\SpringDocConfiguration.class
+com\speed_liv\menu\api\MenusApiController.class
+org\openapitools\configuration\HomeController.class
+com\speed_liv\menu\model\dto\RestaurantDto.class
+com\speed_liv\menu\infrastructure\json\JsonRestaurantRepository$1.class
