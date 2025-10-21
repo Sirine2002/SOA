@@ -1,6 +1,7 @@
 package com.speed_liv.menu.infrastructure.json;
 
 import com.fasterxml.jackson.core.type.TypeReference;
+import org.springframework.context.annotation.Profile;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Repository;
 import com.speed_liv.menu.model.entity.Restaurant;
@@ -14,6 +15,7 @@ import java.util.List;
  * Implémentation du repository qui lit les restaurants depuis un fichier JSON
  */
 @Repository
+@Profile("json")
 public class JsonRestaurantRepository implements RestaurantRepository {
 
     private final ObjectMapper objectMapper;

@@ -1,22 +1,19 @@
-package com.speed_liv.menu.model.entity; // corriger le package
+package com.speed_liv.menu.model.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.CascadeType;
-import javax.persistence.FetchType;
+import javax.persistence.*;
 import java.util.List;
 
-
-import com.speed_liv.menu.model.entity.Plat; // si Plat est dans le même package
-
 @Entity
+@Table(name = "restaurants") // nom de la table dans H2
 public class Restaurant {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // auto-increment pour H2
     private Long id;
+
     private String name;
 
-    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
     private List<Plat> plats;
 
     public Restaurant() {}

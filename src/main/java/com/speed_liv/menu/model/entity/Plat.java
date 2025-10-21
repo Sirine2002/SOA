@@ -3,13 +3,17 @@ package com.speed_liv.menu.model.entity;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "plats")
 public class Plat {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
     private Double price;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "restaurant_id")
     private Restaurant restaurant;
 
@@ -21,7 +25,6 @@ public class Plat {
         this.price = price;
     }
 
-    // getters & setters
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
 

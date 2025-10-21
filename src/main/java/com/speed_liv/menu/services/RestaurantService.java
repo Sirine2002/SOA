@@ -1,7 +1,7 @@
 package com.speed_liv.menu.service;
 
-import com.speed_liv.menu.infrastructure.json.JsonRestaurantRepository;
 import com.speed_liv.menu.model.entity.Restaurant;
+import com.speed_liv.menu.model.repository.RestaurantRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -9,9 +9,9 @@ import java.util.List;
 @Service
 public class RestaurantService {
 
-    private final JsonRestaurantRepository restaurantRepository;
+    private final RestaurantRepository restaurantRepository;
 
-    public RestaurantService(JsonRestaurantRepository restaurantRepository) {
+    public RestaurantService(RestaurantRepository restaurantRepository) {
         this.restaurantRepository = restaurantRepository;
     }
 
